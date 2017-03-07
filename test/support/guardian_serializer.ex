@@ -1,7 +1,7 @@
 defmodule CuratorDatabaseAuthenticatable.Test.GuardianSerializer do
   @behaviour Guardian.Serializer
 
-  alias CuratorConfirmable.Config
+  alias CuratorDatabaseAuthenticatable.Config
 
   def for_token(user) when user != "" and user != nil, do: { :ok, "User:#{user.id}" }
   def for_token(_), do: { :error, "Unknown resource type" }
