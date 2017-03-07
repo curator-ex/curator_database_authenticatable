@@ -58,7 +58,7 @@ defmodule CuratorDatabaseAuthenticatable.Mixfile do
 
   defp package do
     [
-      name: :curator,
+      name: :curator_database_authenticatable,
       maintainers: @maintainers,
       licenses: ["MIT"],
       links: %{github: @url},
