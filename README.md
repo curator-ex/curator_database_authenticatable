@@ -34,6 +34,15 @@ Support password based sign-in by comparing the password to a hashed password. I
     end
     ```
 
+    If you have specific password requirements, CuratorDatabaseAuthenticatable.Schema provides an overridable function, validate_password, which can be used as below:
+
+    ```elixir
+    def validate_password(changeset) do
+      changeset
+      |> validate_length(:password, min: 8)
+    end
+    ```
+
   4. Update `web/router.ex`
 
     ```elixir
