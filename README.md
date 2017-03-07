@@ -91,3 +91,13 @@ Support password based sign-in by comparing the password to a hashed password. I
       assert Phoenix.ConnTest.redirected_to(conn) == session_path(conn, :new)
     end
     ```
+
+  8. (optionally) Add some links
+
+    ```elixir
+    <%= if current_user(@conn) do %>
+      <%= button "Logout", to: session_path(@conn, :delete), method: :delete, class: "btn btn-danger navbar-btn" %><br/>
+    <% else %>
+      <%= button "Login", to: session_path(@conn, :new), class: "btn btn-primary navbar-btn", method: :get %><br/>
+    <% end %>
+    ```
