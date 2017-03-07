@@ -2,7 +2,7 @@ defmodule CuratorDatabaseAuthenticatable.Mixfile do
   use Mix.Project
 
   @version "0.1.0"
-  @url "https://github.com/curator-ex/curator"
+  @url "https://github.com/curator-ex/curator_database_authenticatable"
   @maintainers [
     "Eric Sullivan",
   ]
@@ -17,7 +17,7 @@ defmodule CuratorDatabaseAuthenticatable.Mixfile do
       start_permanent: Mix.env == :prod,
       aliases: aliases,
       deps: deps,
-      description: "An Authentication and User Lifecycle Framework for Phoenix",
+      description: "Support password based sign-in by comparing the password to a hashed password",
       package: package(),
       source_url: @url,
       homepage_url: @url,
