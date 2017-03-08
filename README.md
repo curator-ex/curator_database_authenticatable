@@ -90,6 +90,16 @@ Support password based sign-in by comparing the password to a hashed password. I
       assert Phoenix.Controller.get_flash(conn, :danger) == "Please Log In"
       assert Phoenix.ConnTest.redirected_to(conn) == session_path(conn, :new)
     end
+
+    test "visiting a secret page w/ a signed_in active user", %{conn: conn} do
+      user = create_active_user
+
+      conn = conn
+      |> sign_in(user)
+      |> get("/secret")
+
+      assert html_response(conn, 200) =~ "Sneaky, Sneaky, Sneaky..."
+    end
     ```
 
   8. (optionally) Add some links
