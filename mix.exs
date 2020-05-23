@@ -1,7 +1,7 @@
 defmodule CuratorDatabaseAuthenticatable.Mixfile do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.2.0"
   @url "https://github.com/curator-ex/curator_database_authenticatable"
   @maintainers [
     "Eric Sullivan",
@@ -39,9 +39,8 @@ defmodule CuratorDatabaseAuthenticatable.Mixfile do
   defp deps do
     [
       {:comeonin, "~> 3.0"},
-      {:curator, "~> 0.1.0"},
-      {:ecto, "~> 2.0"},
-      {:postgrex, ">= 0.11.1", optional: true},
+      {:curator, "~> 0.3.1"},
+      {:postgrex, ">= 0.0.0", optional: true},
 
       {:credo, "~> 0.5", only: [:dev, :test]},
       {:dialyxir, "~> 0.4", only: [:dev, :test], runtime: false},
